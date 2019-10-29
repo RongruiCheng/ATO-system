@@ -74,7 +74,7 @@ export default {
         *INITDATA (state, {put, select}) {
             const {color, fuel, buyDate, brand, series, price} = yield select(({tableModel})=> tableModel);
             const {results, total} = yield axios.get(
-                'http://www.aiqianduan.com:7897/cars?' + querystring.stringify({
+                '/api/car?' + querystring.stringify({
                     'color': color.join('v'),
                     'fuel' : fuel.join('v'),
                     'buydate': buyDate.join('to'),
@@ -96,7 +96,7 @@ export default {
         },
         //拉取数据
         *FETCHBSDATA (action, {put}) {
-            const allBS = yield axios.get('http://www.aiqianduan.com:7897/allbs').then(data=>data.data);
+            const allBS = yield axios.get('/api/allbs').then(data=>data.data);
             yield put({'type': 'SETBSDATA', allBS});
         }
     }

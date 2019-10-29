@@ -138,6 +138,7 @@ export default class RegisterForm extends Component {
                                         this.setState({
                                             countdown:this.state.countdown - 1
                                         }, _=>{
+                                            //setState的回调函数
                                             if (this.state.countdown <= 0) {
                                                 this.setState({
                                                     countdown : 6,
@@ -179,8 +180,12 @@ export default class RegisterForm extends Component {
                 <Form.Item>
                     <Row>
                         <Col offset={22}>
-                            <Button type="primary" htmlType="submit">
-                                注册
+                            <Button
+                                onClick={_=>{
+                                    this.props.dispatch({'type':'registerModel/CHANGESTEPS', 'step': 1});
+                                }}
+                                type="primary">
+                                下一步
                             </Button>
                         </Col>
                     </Row>

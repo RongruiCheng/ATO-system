@@ -2,13 +2,20 @@ import axios from 'axios';
 export default {
     namespace : 'registerModel',
     state : {
-        token : ''
+        token : '',
+        step : 1
     },
     reducers : {
         INITTOKEN (state, {token}) {
             return {
                 ...state,
                 token
+            };
+        },
+        CHANGESTEPS (state, {step}) {
+            return {
+                ...state,
+                step
             };
         }
     },
