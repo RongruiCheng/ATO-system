@@ -51,7 +51,7 @@ export default {
             return <div>
                 <Link to={`/purchase/car/${id}`}>
                     <img
-                        src={`http://aiqianduan.com:7897/images/carimages_small/${id}/view/${img}`}
+                        src={`/api/images/carimages_small/${id}/view/${text}`}
                     />
                 </Link>
             </div>;

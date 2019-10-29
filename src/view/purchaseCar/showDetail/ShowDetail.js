@@ -53,7 +53,7 @@ export default class ShowDetail extends Component {
                                 return <img
                                     style={{'marginRight': 10, 'cursor': 'pointer'}}
                                     key={item}
-                                    src={`http://aiqianduan.com:7897/images/carimages_small/${this.props.id}/view/${item}`}/>;
+                                    src={`/api/images/carimages_small/${this.props.id}/view/${item}`}/>;
                             })
                         }
                     </RcViewer>
@@ -70,7 +70,7 @@ export default class ShowDetail extends Component {
                                 return <img
                                     style={{'marginRight': 10, 'cursor': 'pointer'}}
                                     key={item}
-                                    src={`http://aiqianduan.com:7897/images/carimages_small/${this.props.id}/inner/${item}`}/>;
+                                    src={`/api/images/carimages_small/${this.props.id}/inner/${item}`}/>;
                             })
                         }
                     </RcViewer>

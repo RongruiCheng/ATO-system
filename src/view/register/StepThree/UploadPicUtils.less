@@ -1,0 +1,30 @@
+.fakebox{
+    margin-top: 10px;
+    width: 757px;
+    min-height: 100px;
+    border: 1px dashed #1890ff;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom:10px;
+    .prevpic{
+        float: left;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        border: 1px solid #2f8cd6;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        &::after{
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .6);
+            transform: all 1s ease 0s;
+        }
+        &.done::after{
+            opacity: 0;
+        }
+    }
+}

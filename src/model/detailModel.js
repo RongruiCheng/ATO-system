@@ -17,7 +17,7 @@ export default {
     effects: {
         *INITDETAIL ({id}, {put}) {
             //拉取车辆详情数据
-            const {result} = yield axios.get('http://www.aiqianduan.com:7897/car/' + id).then(data=>data.data);
+            const {result} = yield axios.get('/api/car/' + id).then(data=>data.data);
             yield put({'type': 'INIT', id, result});
         }
     }
